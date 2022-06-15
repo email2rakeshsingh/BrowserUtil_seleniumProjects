@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" parallel="tests" thread-count="3" verbose="4">
+
+	<test name="Google Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.google.com" />
+		<classes>
+			<class name="MyTest.GoogleTest" />
+		</classes>
+	</test>
+
+	<test name="Amazon Test">
+		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://www.amazon.in" />
+		<classes>
+			<class name="MyTest.Amazon" />
+		</classes>
+	</test>
+
+	<test name="OpenCart Login Test">
+		<parameter name="browser" value="edge" />
+		<parameter name="url" value="https://demo.opencart.com/index.php?route=account/login" />
+		<classes>
+			<class name="MyTest.OpenCart" />
+		</classes>
+
+	</test>
+	<test name="Negative Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://demo.opencart.com/index.php?route=account/login" />
+		<classes>
+			<class name="MyTest.LoginPageNegativeTest" />
+		</classes>
+	</test>
+</suite>

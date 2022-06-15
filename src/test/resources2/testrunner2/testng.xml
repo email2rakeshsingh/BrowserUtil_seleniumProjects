@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" parallel="tests" thread-count="3" verbose="4">
+
+	<test name="DependsOnMethods Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.consumersearch.com" />
+		<classes>
+			<class name="TestNgSession.DependsOnMethods" />
+		</classes>
+	</test>
+
+	<test name="ExceptionHandling Test">
+		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://www.amazon.in" />
+		<classes>
+			<class name="TestNgSession.ExceptionHandling" />
+		</classes>
+	</test>
+
+	<test name="invocationcount Test">
+		<parameter name="browser" value="ie" />
+		<parameter name="url" value="https://www.amazon.in/" />
+		<classes>
+			<class name="TestNgSession.invocationcount" />
+		</classes>
+	</test>
+
+	<test name="OpencartAppTest Test">
+		<parameter name="browser" value="edge" />
+		<parameter name="url" value="https://demo.opencart.com/index.php?route=account/login" />
+		<classes>
+			<class name="TestNgSession.OpencartAppTest" />
+		</classes>
+	</test>
+
+	<test name="OpenCartBefoeMethod Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://demo.opencart.com/index.php?route=account/login" />
+		<classes>
+			<class name="TestNgSession.OpenCartBefoeMethod" />
+		</classes>
+	</test>
+
+	<test name="TestCaePrortiesTest Test">
+		<parameter name="browser" value="firefox" />
+		<parameter name="url" value="https://www.orangehrm.com/hris-hr-software-demo" />
+		<classes>
+			<class name="TestNgSession.TestCaePrortiesTest" />
+		</classes>
+	</test>
+
+
+</suite>
